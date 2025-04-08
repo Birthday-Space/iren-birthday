@@ -1,0 +1,171 @@
+/* ОБНУЛЕНИЕ И БАЗА */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* КОНТЕЙНЕР */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ХЕДЕР */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+/* НАВИГАЦИЯ */
+.navigation {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #e91e63;
+}
+
+/* БУРГЕР */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s ease;
+}
+
+/* МОБИЛЬНОЕ МЕНЮ */
+@media (max-width: 767px) {
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .navigation.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+
+/* СЕКЦИИ */
+section {
+  padding: 60px 0;
+}
+
+section:nth-child(even) {
+  background-color: #fff;
+}
+
+section:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  color: #e91e63;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+/* ФУТЕР */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  .nav-list a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
