@@ -102,11 +102,17 @@ header {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 768px) {
+.hero-title {
+  font-size: 28px;
+  color: aqua;
+  margin: 0 auto;
+}
+
+.herо-text @media screen and (min-width: 768px) {
   .hero {
     background-size: cover;
     max-width: 768px;
-    height: 80vh;
+    height: 400px;
   }
 }
 
@@ -114,6 +120,23 @@ header {
   .hero {
     background-size: cover;
     max-width: 1280px;
-    height: 70vh;
+    height: 600px;
   }
+}
+
+/* CONGRATS SECTION */
+
+.congrats {
+}
+.container {
+}
+.congrats-list {
+}
+.congrats-card {
+  border: #e91e63 solid 2px;
+  border-radius: 24px;
+  padding: 8px;
+  margin: 16px auto;
+}
+.congrats-text {
 }

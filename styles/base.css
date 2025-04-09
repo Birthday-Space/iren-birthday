@@ -64,13 +64,13 @@ body {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
 section {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 section:nth-child(even) {
@@ -79,4 +79,28 @@ section:nth-child(even) {
 
 section:nth-child(odd) {
   background-color: #f1f1f1;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
 }
