@@ -1,31 +1,6 @@
-/* ОБНУЛЕНИЕ И БАЗА */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-/* КОНТЕЙНЕР */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* ХЕДЕР */
+/* HEADER */
 header {
-  background-color: #fff;
+  background-color: #fbfbfb;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -115,57 +90,30 @@ header {
   }
 }
 
-/* СЕКЦИИ */
-section {
-  padding: 60px 0;
+/* HERO SECTION */
+
+.hero {
+  background-image: url(../images/hero/hero_2.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  max-width: 375px;
+  height: 90vh;
+  margin: 0 auto;
 }
 
-section:nth-child(even) {
-  background-color: #fff;
-}
-
-section:nth-child(odd) {
-  background-color: #f1f1f1;
-}
-
-h1,
-h2 {
-  margin-bottom: 20px;
-  color: #e91e63;
-  font-size: 1.5rem;
-}
-
-p {
-  font-size: 1.1rem;
-}
-
-/* ФУТЕР */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
-}
-
-/* АДАПТИВНОСТЬ */
-@media (min-width: 768px) {
-  h1,
-  h2 {
-    font-size: 2rem;
-  }
-
-  .nav-list a {
-    font-size: 1.1rem;
+@media screen and (min-width: 768px) {
+  .hero {
+    background-size: cover;
+    max-width: 768px;
+    height: 80vh;
   }
 }
 
-@media (min-width: 1280px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-size: 1.2rem;
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-size: cover;
+    max-width: 1280px;
+    height: 70vh;
   }
 }

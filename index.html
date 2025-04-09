@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>С Днем Рождения, Ирина!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <!-- ХЕДЕР -->
+    <!-- HEADER -->
     <header>
       <div class="container header-container">
         <div class="logo">Ирина 2025</div>
@@ -18,7 +26,7 @@
             <li><a href="#surprise">Сюрприз</a></li>
           </ul>
         </nav>
-        <!-- Мобильное меню (бургер) -->
+        <!-- Mobile menu -->
         <div class="burger-menu">
           <span class="burger-line"></span>
           <span class="burger-line"></span>
@@ -27,16 +35,16 @@
       </div>
     </header>
 
-    <!-- СЕКЦИЯ 1: ГЕРОЙ -->
-    <section id="hero">
-      <div class="container">
+    <!-- SECTION 1: HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-container">
         <h1>С Днем Рождения, Ирина!</h1>
         <p>Пусть этот день будет наполнен радостью, теплом и счастьем 🎉</p>
       </div>
     </section>
 
-    <!-- СЕКЦИЯ 2: ПОЗДРАВЛЕНИЯ -->
-    <section id="congrats">
+    <!-- SECTION 2: CONGRATS -->
+    <section id="congrats" class="hidden">
       <div class="container">
         <h2>Поздравления от родных и близких</h2>
         <!-- Здесь могут быть карточки, сообщения, видео и т.п. -->
@@ -44,8 +52,8 @@
       </div>
     </section>
 
-    <!-- СЕКЦИЯ 3: СЮРПРИЗ -->
-    <section id="surprise">
+    <!-- SECTION 3: SURPRISE -->
+    <section id="surprise" class="hidden">
       <div class="container">
         <h2>Сюрприз</h2>
         <p>Загляни внутрь — тебя ждёт нечто особенное ✨</p>
@@ -53,8 +61,8 @@
       </div>
     </section>
 
-    <!-- ФУТЕР -->
-    <footer>
+    <!-- FOOTER -->
+    <footer class="hidden">
       <div class="container">
         <p>&copy; 2025 С любовью для Ирины 💖</p>
       </div>
