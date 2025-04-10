@@ -42,75 +42,72 @@
         </div>
       </div>
     </header>
-
-    <!-- SECTION 1: HERO -->
-    <section id="hero" class="hero hidden">
-      <div class="container hero-container">
-        <h1 class="hero-title">С Днем Рождения, Ирина!</h1>
-        <p class="hero-text">
-          Пусть этот день будет наполнен радостью, теплом и счастьем 🎉
-        </p>
-      </div>
-    </section>
-
-    <!-- SECTION 2: CONGRATS -->
     <main>
-      <section id="congrats" class="congrats hidden">
+      <!-- SECTION 1: HERO -->
+      <section id="hero" class="hero">
+        <div class="container hero-container">
+          <h1 class="hero-title">С Днем Рождения, Ирина!</h1>
+          <p class="hero-text">
+            Пусть этот день будет наполнен радостью, теплом и счастьем 🎉
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: CONGRATS -->
+
+      <section id="congrats">
         <div class="container">
-          <h2>Поздравления</h2>
-          <ul class="congrats-list">
-            <li class="congrats-card">
-              <p class="congrats-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Deserunt pariatur dicta placeat, quas beatae voluptatum
-                voluptatibus accusamus cumque eligendi vitae eum culpa
-                architecto distinctio a sit! Provident, iusto aspernatur.
-                Sapiente.
-              </p>
+          <h2>Поздравления от родных и близких</h2>
+          <ul class="greetings-list">
+            <li
+              class="greeting-item"
+              data-type="youtube"
+              data-src="https://www.youtube.com/watch?v=AKJfakEsgy0"
+            >
+              <div class="greeting-thumb">
+                <img src="images/congrats/vetal.jpg" alt="Виталий" />
+                <span class="play-icon">▶</span>
+              </div>
+              <p>Виталий</p>
             </li>
-            <li class="congrats-card">
-              <p class="congrats-text">
-                Dolorem assumenda voluptatum alias labore! Officia minima
-                cupiditate repudiandae deserunt quidem quasi, blanditiis vero.
-                Animi eum, culpa error temporibus nulla nemo sit quia, nobis
-                magnam beatae doloremque cupiditate eligendi ut?
-              </p>
+            <li
+              class="greeting-item"
+              data-type="text"
+              data-src="Ирина Александровна! Помни, кто ты! Желаю не ждать чудес, а чудить самостоятельно!"
+            >
+              <div class="greeting-thumb">
+                <img src="images/congrats/aleksey-gorin.jpg" alt="Братик" />
+              </div>
+              <p>Алексей</p>
             </li>
-            <li class="congrats-card">
-              <p class="congrats-text">
-                Deleniti rerum dolorum dignissimos, soluta temporibus officia
-                nisi, dolorem, asperiores sint culpa aperiam voluptate ad ea
-                cumque omnis est dolores qui quasi eligendi ipsa nesciunt id
-                vel! Blanditiis, minima! Tempora!
-              </p>
+            <li class="greeting-item" data-type="text" data-src="Гав Гав">
+              <div class="greeting-thumb">
+                <img src="images/congrats/elza.jpg" alt="Єльза" />
+              </div>
+              <p>Эльза</p>
             </li>
-            <li class="congrats-card">
-              <p class="congrats-text">
-                Quam ex inventore quod animi facere nemo quibusdam cupiditate
-                repellat? Doloremque quae rerum aperiam, nisi consequuntur
-                aliquid illo quaerat ullam excepturi possimus, in, fugit quis
-                reprehenderit facere dolores corrupti blanditiis.
-              </p>
-            </li>
-            <li class="congrats-card">
-              <p class="congrats-text">
-                Repudiandae itaque neque adipisci aut, illo veniam dolore
-                cumque, magni dolor debitis facere pariatur quis mollitia
-                explicabo eveniet dignissimos quibusdam nostrum ipsam
-                voluptatibus voluptas ut nulla? Enim nam aut nobis!
-              </p>
-            </li>
-            <li class="congrats-card">
-              <p class="congrats-text">
-                Quibusdam, illum nulla? Sequi, eveniet! Vel nostrum nesciunt
-                distinctio ducimus perspiciatis tempore quidem repellat
-                veritatis illum molestias odit est, architecto eligendi saepe
-                officia soluta nisi expedita rem. Natus, nihil eius?
-              </p>
+            <li
+              class="greeting-item"
+              data-type="text"
+              data-src="С днем рождения, маманя. Даш поесть?"
+            >
+              <div class="greeting-thumb">
+                <img src="images/congrats/cat.jpg" alt="Кот" />
+              </div>
+              <p>Кот</p>
             </li>
           </ul>
         </div>
       </section>
+
+      <!-- Модальное окно -->
+      <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+          <span class="modal-close" id="modal-close">&times;</span>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+
       <!-- SECTION 3: SURPRISE -->
       <section id="surprise" class="video hidden">
         <div class="container">
@@ -132,8 +129,9 @@
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modals.js"></script>
 
-    <section>
+    <section class="hidden">
       <h2
         style="
           display: block;

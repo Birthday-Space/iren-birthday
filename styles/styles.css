@@ -126,17 +126,96 @@ header {
 
 /* CONGRATS SECTION */
 
-.congrats {
-}
-.container {
-}
-.congrats-list {
-}
-.congrats-card {
+.greeting-item {
   border: #e91e63 solid 2px;
   border-radius: 24px;
   padding: 8px;
   margin: 16px auto;
+  width: 100%;
+  max-width: 100%;
 }
-.congrats-text {
+
+.greeting-thumb {
+  position: relative;
+}
+
+.greeting-thumb img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.play-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 4px 8px;
+  display: none;
+}
+
+.greeting-item[data-type="video"] .play-icon,
+.greeting-item[data-type="youtube"] .play-icon {
+  display: block;
+}
+
+/* Модалка */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
