@@ -4,31 +4,55 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalBody = document.getElementById("modal-body");
   const modalClose = document.getElementById("modal-close");
 
-  document.querySelectorAll(".greeting-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      const type = item.dataset.type;
-      const src = item.dataset.src;
+  document.querySelectorAll(".greeting-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      const type = card.dataset.type;
+      const src = card.dataset.src;
+      const text = card.dataset.text || "";
       modalBody.innerHTML = "";
 
-      if (type === "video") {
-        modalBody.innerHTML = `
-          <video controls autoplay>
-            <source src="${src}" type="video/mp4">
-            Ваш браузер не поддерживает видео.
-          </video>
-        `;
-      } else if (type === "youtube") {
-        const videoId = getYouTubeId(src);
-        modalBody.innerHTML = `
-          <div class="video-wrapper">
-            <iframe width="100%" height="400" 
-              src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
-              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-            </iframe>
-          </div>
-        `;
-      } else {
-        modalBody.innerHTML = `<p>${src}</p>`;
+      switch (type) {
+        case "video":
+          modalBody.innerHTML = `
+            <video controls autoplay style="width: 100%;">
+              <source src="${src}" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>`;
+          break;
+
+        case "youtube":
+          const id = src.match(
+            /(?:youtu\.be\/|youtube\.com.*v=)([^&\n?#]+)/
+          )[1];
+          modalBody.innerHTML = `
+            <div class="video-wrapper">
+              <iframe width="100%" height="400" src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>`;
+          break;
+
+        case "audio":
+          modalBody.innerHTML = `
+            <audio controls autoplay style="width: 100%;">
+              <source src="${src}" type="audio/mpeg">
+              Ваш браузер не поддерживает аудио.
+            </audio>`;
+          break;
+
+        case "image":
+          modalBody.innerHTML = `<img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px;">`;
+          break;
+
+        case "image-text":
+          modalBody.innerHTML = `
+            <img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+            <p>${text}</p>`;
+          break;
+
+        case "text":
+        default:
+          modalBody.innerHTML = `<p>${src}</p>`;
+          break;
       }
 
       modal.classList.add("active");
@@ -43,11 +67,5 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeModal() {
     modal.classList.remove("active");
     modalBody.innerHTML = "";
-  }
-
-  // Получение ID из YouTube-ссылки
-  function getYouTubeId(url) {
-    const match = url.match(/(?:youtu\.be\/|youtube\.com.*v=)([^&\n?#]+)/);
-    return match ? match[1] : "";
   }
 });

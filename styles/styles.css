@@ -126,7 +126,7 @@ header {
 
 /* CONGRATS SECTION */
 
-.greeting-item {
+/* .greeting-item {
   border: #e91e63 solid 2px;
   border-radius: 24px;
   padding: 8px;
@@ -161,54 +161,7 @@ header {
 .greeting-item[data-type="video"] .play-icon,
 .greeting-item[data-type="youtube"] .play-icon {
   display: block;
-}
-
-/* Модалка */
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  animation: fadeIn 0.3s ease forwards;
-}
-
-.modal-overlay.active {
-  display: flex;
-}
-
-.modal-content {
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px 20px;
-  max-width: 700px;
-  width: 100%;
-  position: relative;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.3s ease;
-}
-
-.modal-overlay.active .modal-content {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.modal-close {
-  position: absolute;
-  right: 10px;
-  top: 0px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal-content video {
-  width: 100%;
-  border-radius: 8px;
-}
+} */
 
 /* Анимация */
 @keyframes fadeIn {
@@ -218,4 +171,82 @@ header {
   to {
     opacity: 1;
   }
+}
+
+/* ==================== */
+.greeting-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+}
+
+.greeting-card {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.greeting-card img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 50%;
+  /* font-size: 16px; */
+  padding: 6px;
+  width: 34px;
+  height: 34px;
+  fill: white;
+}
+
+.greeting-card p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Модалка */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
 }

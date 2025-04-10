@@ -54,56 +54,90 @@
       </section>
 
       <!-- SECTION 2: CONGRATS -->
-
+      <!-- ▶ 🔊 🖼 ✉️ 💌-->
       <section id="congrats">
         <div class="container">
           <h2>Поздравления от родных и близких</h2>
-          <ul class="greetings-list">
+          <ul class="greeting-list">
+            <!-- #1 Greeting -->
+
             <li
-              class="greeting-item"
+              class="greeting-card"
               data-type="youtube"
               data-src="https://www.youtube.com/watch?v=AKJfakEsgy0"
             >
-              <div class="greeting-thumb">
-                <img src="images/congrats/vetal.jpg" alt="Виталий" />
-                <span class="play-icon">▶</span>
-              </div>
-              <p>Виталий</p>
+              <img src="images/congrats/vetal.jpg" alt="Анна" />
+              <span class="card-icon">▶</span>
+              <p>Ветал</p>
             </li>
+            <!-- #2 Greeting -->
+
             <li
-              class="greeting-item"
+              class="greeting-card"
               data-type="text"
-              data-src="Ирина Александровна! Помни, кто ты! Желаю не ждать чудес, а чудить самостоятельно!"
+              data-src="Ирина Александровна! Помни, кто ты! Желаю не ждать чудес, а чудить самостоятельно"
             >
-              <div class="greeting-thumb">
-                <img src="images/congrats/aleksey-gorin.jpg" alt="Братик" />
-              </div>
+              <img src="images/congrats/aleksey-gorin.jpg" alt="Алексей" />
+              <span class="card-icon">✉️</span>
               <p>Алексей</p>
             </li>
-            <li class="greeting-item" data-type="text" data-src="Гав Гав">
-              <div class="greeting-thumb">
-                <img src="images/congrats/elza.jpg" alt="Єльза" />
-              </div>
-              <p>Эльза</p>
-            </li>
+            <!-- #3 Greeting -->
+
             <li
-              class="greeting-item"
-              data-type="text"
-              data-src="С днем рождения, маманя. Даш поесть?"
+              class="greeting-card"
+              data-type="audio"
+              data-src="/audio/cat-meow.mp3"
             >
-              <div class="greeting-thumb">
-                <img src="images/congrats/cat.jpg" alt="Кот" />
-              </div>
+              <img src="images/congrats/cat.jpg" alt="Кот" />
+              <span class="card-icon">🔊</span>
               <p>Кот</p>
+            </li>
+            <!-- #4 Greeting -->
+
+            <li
+              class="greeting-card"
+              data-type="image"
+              data-src="images/congrats/elza-real.jpg"
+            >
+              <img src="images/congrats/elza.jpg" alt="Эльза" />
+              <span class="card-icon">🖼</span>
+              <p>Эльза</p>
+              <!-- #5 Greeting -->
+            </li>
+
+            <li
+              class="greeting-card"
+              data-type="text"
+              data-src="С днём рождения! Пусть всё сбудется!"
+            >
+              <img src="images/user5.jpg" alt="Ирина" />
+              <span class="card-icon">✉️</span>
+              <p>Ирина</p>
+            </li>
+            <!-- #6 Greeting -->
+
+            <li
+              class="greeting-card"
+              data-type="image-text"
+              data-src="images/balloons.jpg"
+              data-text="Желаю счастья, здоровья и успеха!"
+            >
+              <img src="images/user6.jpg" alt="Андрей" />
+              <span class="card-icon">💌</span>
+              <p>Андрей</p>
             </li>
           </ul>
         </div>
       </section>
 
       <!-- Модальное окно -->
-      <div class="modal-overlay" id="modal">
+      <div id="modal" class="modal">
         <div class="modal-content">
-          <span class="modal-close" id="modal-close">&times;</span>
+          <button id="modal-close" class="modal-close">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
           <div id="modal-body"></div>
         </div>
       </div>
