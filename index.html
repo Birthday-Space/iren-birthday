@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="hidden">
       <div class="container header-container">
         <div class="logo">Ирина 2025</div>
         <nav class="navigation">
@@ -44,7 +44,7 @@
     </header>
 
     <!-- SECTION 1: HERO -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero hidden">
       <div class="container hero-container">
         <h1 class="hero-title">С Днем Рождения, Ирина!</h1>
         <p class="hero-text">
@@ -54,81 +54,96 @@
     </section>
 
     <!-- SECTION 2: CONGRATS -->
-    <section id="congrats" class="congrats">
-      <div class="container">
-        <h2>Поздравления</h2>
-        <ul class="congrats-list">
-          <li class="congrats-card">
-            <p class="congrats-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
-              pariatur dicta placeat, quas beatae voluptatum voluptatibus
-              accusamus cumque eligendi vitae eum culpa architecto distinctio a
-              sit! Provident, iusto aspernatur. Sapiente.
-            </p>
-          </li>
-          <li class="congrats-card">
-            <p class="congrats-text">
-              Dolorem assumenda voluptatum alias labore! Officia minima
-              cupiditate repudiandae deserunt quidem quasi, blanditiis vero.
-              Animi eum, culpa error temporibus nulla nemo sit quia, nobis
-              magnam beatae doloremque cupiditate eligendi ut?
-            </p>
-          </li>
-          <li class="congrats-card">
-            <p class="congrats-text">
-              Deleniti rerum dolorum dignissimos, soluta temporibus officia
-              nisi, dolorem, asperiores sint culpa aperiam voluptate ad ea
-              cumque omnis est dolores qui quasi eligendi ipsa nesciunt id vel!
-              Blanditiis, minima! Tempora!
-            </p>
-          </li>
-          <li class="congrats-card">
-            <p class="congrats-text">
-              Quam ex inventore quod animi facere nemo quibusdam cupiditate
-              repellat? Doloremque quae rerum aperiam, nisi consequuntur aliquid
-              illo quaerat ullam excepturi possimus, in, fugit quis
-              reprehenderit facere dolores corrupti blanditiis.
-            </p>
-          </li>
-          <li class="congrats-card">
-            <p class="congrats-text">
-              Repudiandae itaque neque adipisci aut, illo veniam dolore cumque,
-              magni dolor debitis facere pariatur quis mollitia explicabo
-              eveniet dignissimos quibusdam nostrum ipsam voluptatibus voluptas
-              ut nulla? Enim nam aut nobis!
-            </p>
-          </li>
-          <li class="congrats-card">
-            <p class="congrats-text">
-              Quibusdam, illum nulla? Sequi, eveniet! Vel nostrum nesciunt
-              distinctio ducimus perspiciatis tempore quidem repellat veritatis
-              illum molestias odit est, architecto eligendi saepe officia soluta
-              nisi expedita rem. Natus, nihil eius?
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SECTION 3: SURPRISE -->
-    <section id="surprise" class="video">
-      <div class="container">
-        <h2>Сюрприз</h2>
-        <p>Загляни внутрь — тебя ждёт нечто особенное ✨</p>
-        <div class="video-container">
-          <video controls autoplay muted loop width="100%">
-            <source src="./videos/videoplayback.mp4" type="video/mp4" />
-          </video>
+    <main>
+      <section id="congrats" class="congrats hidden">
+        <div class="container">
+          <h2>Поздравления</h2>
+          <ul class="congrats-list">
+            <li class="congrats-card">
+              <p class="congrats-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Deserunt pariatur dicta placeat, quas beatae voluptatum
+                voluptatibus accusamus cumque eligendi vitae eum culpa
+                architecto distinctio a sit! Provident, iusto aspernatur.
+                Sapiente.
+              </p>
+            </li>
+            <li class="congrats-card">
+              <p class="congrats-text">
+                Dolorem assumenda voluptatum alias labore! Officia minima
+                cupiditate repudiandae deserunt quidem quasi, blanditiis vero.
+                Animi eum, culpa error temporibus nulla nemo sit quia, nobis
+                magnam beatae doloremque cupiditate eligendi ut?
+              </p>
+            </li>
+            <li class="congrats-card">
+              <p class="congrats-text">
+                Deleniti rerum dolorum dignissimos, soluta temporibus officia
+                nisi, dolorem, asperiores sint culpa aperiam voluptate ad ea
+                cumque omnis est dolores qui quasi eligendi ipsa nesciunt id
+                vel! Blanditiis, minima! Tempora!
+              </p>
+            </li>
+            <li class="congrats-card">
+              <p class="congrats-text">
+                Quam ex inventore quod animi facere nemo quibusdam cupiditate
+                repellat? Doloremque quae rerum aperiam, nisi consequuntur
+                aliquid illo quaerat ullam excepturi possimus, in, fugit quis
+                reprehenderit facere dolores corrupti blanditiis.
+              </p>
+            </li>
+            <li class="congrats-card">
+              <p class="congrats-text">
+                Repudiandae itaque neque adipisci aut, illo veniam dolore
+                cumque, magni dolor debitis facere pariatur quis mollitia
+                explicabo eveniet dignissimos quibusdam nostrum ipsam
+                voluptatibus voluptas ut nulla? Enim nam aut nobis!
+              </p>
+            </li>
+            <li class="congrats-card">
+              <p class="congrats-text">
+                Quibusdam, illum nulla? Sequi, eveniet! Vel nostrum nesciunt
+                distinctio ducimus perspiciatis tempore quidem repellat
+                veritatis illum molestias odit est, architecto eligendi saepe
+                officia soluta nisi expedita rem. Natus, nihil eius?
+              </p>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+      <!-- SECTION 3: SURPRISE -->
+      <section id="surprise" class="video hidden">
+        <div class="container">
+          <h2>Сюрприз</h2>
+          <p>Загляни внутрь — тебя ждёт нечто особенное ✨</p>
+          <div class="video-container">
+            <video controls autoplay muted loop width="100%">
+              <source src="./videos/videoplayback.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container">
         <p>&copy; 2025 С любовью для Ирины 💖</p>
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
+
+    <section>
+      <h2
+        style="
+          display: block;
+          color: red;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        Сайт находится на техническом обслуживании!
+      </h2>
+    </section>
   </body>
 </html>
