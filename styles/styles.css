@@ -1,5 +1,6 @@
 /* HEADER */
 header {
+  display: none;
   background-color: #fbfbfb;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -93,9 +94,17 @@ header {
 /* HERO SECTION */
 
 .hero {
-  background: var(--yellow);
+  background: url("../images/patterns/pattern.png"), var(--yellow);
+  background-size: contain;
+
   max-width: 375px;
-  height: 90vh;
+  margin: 0 auto;
+
+  padding: 62px 0;
+}
+
+.hero-image {
+  height: auto;
   margin: 0 auto;
 }
 
@@ -106,62 +115,8 @@ header {
   text-align: center;
   color: var(--white);
   text-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
+  margin-top: -90px;
 }
-
-@media screen and (min-width: 768px) {
-  .hero {
-    background-size: cover;
-    max-width: 768px;
-    height: 400px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .hero {
-    background-size: cover;
-    max-width: 1280px;
-    height: 600px;
-  }
-}
-
-/* CONGRATS SECTION */
-
-/* .greeting-item {
-  border: #e91e63 solid 2px;
-  border-radius: 24px;
-  padding: 8px;
-  margin: 16px auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.greeting-thumb {
-  position: relative;
-}
-
-.greeting-thumb img {
-  width: 100%;
-  height: fit-content;
-  object-fit: cover;
-  border-radius: 24px;
-}
-
-.play-icon {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  border-radius: 50%;
-  font-size: 14px;
-  padding: 4px 8px;
-  display: none;
-}
-
-.greeting-item[data-type="video"] .play-icon,
-.greeting-item[data-type="youtube"] .play-icon {
-  display: block;
-} */
 
 /* Анимация */
 @keyframes fadeIn {
@@ -173,6 +128,23 @@ header {
   }
 }
 
+/* CONGRATS */
+
+.congrats {
+  width: 100%;
+  background: url("../images/patterns/pattern.png"), var(--orange);
+  background-size: contain;
+  background-position: center;
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 100px;
+}
 /* ==================== */
 .greeting-list {
   list-style: none;

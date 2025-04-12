@@ -46,15 +46,21 @@
       <!-- SECTION 1: HERO -->
       <section id="hero" class="hero">
         <div class="container hero-container">
+          <img
+            class="hero-image"
+            width="637"
+            height="548"
+            src="./images/hero/hero.png"
+          ></img>
           <h1 class="hero-title">Happy Birthday</h1>
         </div>
       </section>
 
       <!-- SECTION 2: CONGRATS -->
 
-      <section id="congrats">
+      <section id="congrats" class="congrats">
         <div class="container">
-          <h2>Поздравления от родных и близких</h2>
+          <h2 class="section-title">Принимай поздравления</h2>
           <ul class="greeting-list">
             <!-- #Will&Alex Greeting -->
             <li
@@ -62,7 +68,7 @@
               data-type="youtube"
               data-src="https://www.youtube.com/watch?v=AKJfakEsgy0"
             >
-              <img src="images/congrats/vetal.jpg" alt="" />
+          
               <span class="card-icon">▶</span>
               <p>Парни</p>
             </li>
@@ -70,10 +76,11 @@
             <!-- #2 Brother greeting-->
             <li
               class="greeting-card"
-              data-type="text"
-              data-src="Ирина Александровна! Помни, кто ты! Желаю не ждать чудес, а чудить самостоятельно"
+              data-type="image-text"
+              data-src="./images/congrats/aleksey-gorin.jpg"
+              data-text="Ирина Александровна! Помни, кто ты! Желаю не ждать чудес, а чудить самостоятельно"
             >
-              <img src="images/congrats/aleksey-gorin.jpg" alt="Алексей" />
+          
               <span class="card-icon">✉️</span>
               <p>Брат</p>
             </li>
@@ -84,7 +91,7 @@
               data-type="audio"
               data-src="/audio/cat-meow.mp3"
             >
-              <img src="images/congrats/cat.jpg" alt="Кот" />
+          
               <span class="card-icon">🔊</span>
               <p>Кот</p>
             </li>
@@ -95,7 +102,7 @@
               data-type="image"
               data-src="images/congrats/elza-real.jpg"
             >
-              <img src="images/congrats/elza.jpg" alt="Эльза" />
+        
               <span class="card-icon">🖼</span>
               <p>Эльза</p>
             </li>
@@ -106,9 +113,9 @@
               data-type="youtube"
               data-src="https://www.youtube.com/watch?v=L3tWOLqNKJw"
             >
-              <img src="images/user5.jpg" alt="Марина" />
+        
               <span class="card-icon">✉️</span>
-              <p>Подруга</p>
+              <p>Марина</p>
             </li>
 
             <!-- Ruslan Greeting -->
@@ -117,7 +124,6 @@
               data-type="youtube"
               data-src="https://www.youtube.com/watch?v=ukNWmIAhLEo"
             >
-              <img src="images/user6.jpg" alt="Руслан" />
               <span class="card-icon">💌</span>
               <p>Муж</p>
             </li>
@@ -129,9 +135,18 @@
               data-src="images/congrats/gleb.jpg"
               data-audio="audio/gleb-audio.mp3"
             >
-              <img src="images/user7.jpg" alt="Глеб" />
               <span class="card-icon">🎵</span>
               <p>Сын</p>
+            </li>
+             <!-- Alina Greeting -->
+            <li
+              class="greeting-card"
+              data-type="youtube"
+              data-src="https://www.youtube.com/shorts/r5Yo4ZuY5ec"
+            >
+        
+              <span class="card-icon">✉️</span>
+              <p>Алина</p>
             </li>
           </ul>
         </div>
@@ -149,19 +164,7 @@
         </div>
       </div>
 
-      <!-- SECTION 3: SURPRISE -->
-      <section id="surprise" class="video hidden">
-        <div class="container">
-          <h2>Сюрприз</h2>
-          <p>Загляни внутрь — тебя ждёт нечто особенное ✨</p>
-          <div class="video-container">
-            <video controls autoplay muted loop width="100%">
-              <source src="./videos/videoplayback.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
-    </main>
+      
 
     <!-- FOOTER -->
     <footer class="page-footer hidden">
@@ -172,17 +175,6 @@
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modals.js"></script>
 
-    <section class="hidden">
-      <h2
-        style="
-          display: block;
-          color: red;
-          margin-left: auto;
-          margin-right: auto;
-        "
-      >
-        Сайт находится на техническом обслуживании!
-      </h2>
-    </section>
+   
   </body>
 </html>

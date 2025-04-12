@@ -21,14 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
 
         case "youtube":
-          const id = src.match(
-            /(?:youtu\.be\/|youtube\.com.*v=)([^&\n?#]+)/
-          )[1];
+          const isShorts = src.includes("shorts");
+          const videoId = isShorts
+            ? src.split("/shorts/")[1]
+            : src.match(/(?:youtu\.be\/|youtube\.com.*v=)([^&\n?#]+)/)[1];
+
           modalBody.innerHTML = `
-            <div class="video-wrapper">
-              <iframe width="100%" height="400" src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>`;
+    <div class="video-wrapper">
+      <iframe width="100%" height="400" 
+        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0${
+            isShorts ? "&mute=0" : ""
+          }" 
+        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+  `;
           break;
 
         case "audio":
