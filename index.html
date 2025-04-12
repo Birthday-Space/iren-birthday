@@ -42,6 +42,7 @@
         </div>
       </div>
     </header>
+
     <main>
       <!-- SECTION 1: HERO -->
       <section id="hero" class="hero">
@@ -50,8 +51,8 @@
             class="hero-image"
             width="637"
             height="548"
-            src="./images/hero/hero.png"
-          ></img>
+            src="./images/hero/hero.png">
+          </img>
           <h1 class="hero-title">Happy Birthday</h1>
         </div>
       </section>
@@ -189,12 +190,19 @@
         </div>
       </section>
 
+
+      <section id="gift" class="gift-section">
+        <div class="container">
+          <button class="get-gift-btn" id="get-gift-btn" type="button">Получить подарок</button>
+        </div>
+      </section>
+
       <!-- Модальное окно -->
       <div id="modal" class="modal">
         <div class="modal-content">
           <button id="modal-close" class="modal-close">
             <svg width="24" height="24">
-              <use href="./images/icons.svg#icon-close"></use>
+              <use href="./images/icons/sprite.svg#icon-close"></use>
             </svg>
           </button>
           <div id="modal-body"></div>
@@ -206,7 +214,7 @@
     <!-- FOOTER -->
     <footer class="page-footer hidden">
       <div class="container">
-        <p>&copy; 2025 С любовью для Ирины 💖</p>
+        <p class="footer-text">&copy; 2025 С любовью для Ирины 💖</p>
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
