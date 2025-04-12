@@ -1,3 +1,7 @@
+section {
+  display: none;
+}
+
 :root {
   --red: #ffadad;
   --orange: #ffd6a5;
