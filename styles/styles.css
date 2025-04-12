@@ -97,6 +97,7 @@ header {
   background: url("../images/patterns/pattern_green.png"), var(--yellow);
   background-size: contain;
   margin: 0 auto;
+  overflow: hidden;
 
   padding: 62px 0;
 }
@@ -104,16 +105,29 @@ header {
 .hero-image {
   height: auto;
   margin: 0 auto;
+  min-width: 496px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .hero-title {
+  position: relative;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 44px;
+  line-height: 2;
   text-align: center;
   color: var(--white);
   text-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
-  margin-top: -90px;
+  margin-top: -88px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-image {
+    position: static;
+    transform: none;
+  }
 }
 
 /* Анимация */
@@ -173,8 +187,11 @@ header {
 }
 
 .card-icon {
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 29px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .card-sign {
