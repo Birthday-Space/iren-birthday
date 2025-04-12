@@ -94,7 +94,7 @@ header {
 /* HERO SECTION */
 
 .hero {
-  background: url("../images/patterns/pattern.png"), var(--yellow);
+  background: url("../images/patterns/pattern_green.png"), var(--yellow);
   background-size: contain;
   margin: 0 auto;
 
@@ -132,6 +132,8 @@ header {
   background: url("../images/patterns/pattern.png"), var(--orange);
   background-size: contain;
   background-position: center;
+  text-align: center;
+  padding: 160px 0;
 }
 
 .section-title {
@@ -140,14 +142,13 @@ header {
   font-size: 40px;
   text-align: center;
   color: #000;
-  margin-bottom: 100px;
+  margin-bottom: 32px;
 }
 /* ==================== */
 .greeting-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
   padding: 0;
 }
 
@@ -159,15 +160,21 @@ header {
 }
 
 .greeting-card:nth-of-type(3n + 1) {
-  background-color: var(--pink);
+  background: url("../images/patterns/pattern.png"), var(--pink);
+  background-size: contain;
+  background-position: center;
 }
 
 .greeting-card:nth-of-type(3n + 2) {
-  background-color: var(--green);
+  background: url("../images/patterns/pattern.png"), var(--green);
+  background-size: contain;
+  background-position: center;
 }
 
 .greeting-card:nth-of-type(3n + 3) {
-  background-color: var(--blue);
+  background: url("../images/patterns/pattern.png"), var(--blue);
+  background-size: contain;
+  background-position: center;
 }
 
 .card-icon {
@@ -199,7 +206,7 @@ header {
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--red);
   padding: 40px 20px;
   border-radius: 12px;
   max-width: 600px;
