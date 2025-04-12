@@ -1,0 +1,57 @@
+/* Контейнеры */
+#balloons-container,
+#confetti-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation-name: float-up;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(var(--x-shift, 0px));
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: absolute;
+  top: -20px;
+  width: 8px;
+  height: 12px;
+  opacity: 0.9;
+  transform: rotate(0deg);
+  animation-name: fall-down;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall-down {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) translateX(var(--x-shift, 0px)) rotate(360deg);
+    opacity: 0;
+  }
+}

@@ -83,5 +83,60 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeModal() {
     modal.classList.remove("active");
     modalBody.innerHTML = "";
+    launchCelebration();
+  }
+
+  function launchCelebration() {
+    const balloonContainer = document.getElementById("balloons-container");
+    const confettiContainer = document.getElementById("confetti-container");
+
+    balloonContainer.innerHTML = "";
+    confettiContainer.innerHTML = "";
+
+    // 🎈 Шарики
+    for (let i = 0; i < 15; i++) {
+      const balloon = document.createElement("div");
+      balloon.className = "balloon";
+      balloon.style.left = `${Math.random() * 100}%`;
+      balloon.style.backgroundColor = randomColor();
+
+      const duration = 3 + Math.random() * 2; // 3–5 сек
+      const delay = Math.random(); // 0–1 сек
+      const xShift = Math.random() * 100 - 50; // от -50 до 50px
+
+      balloon.style.animationDuration = `${duration}s`;
+      balloon.style.animationDelay = `${delay}s`;
+      balloon.style.setProperty("--x-shift", `${xShift}px`);
+
+      balloonContainer.appendChild(balloon);
+    }
+
+    // 🎉 Конфетти
+    for (let i = 0; i < 40; i++) {
+      const confetti = document.createElement("div");
+      confetti.className = "confetti";
+      confetti.style.left = `${Math.random() * 100}%`;
+      confetti.style.backgroundColor = randomColor();
+
+      const duration = 2 + Math.random() * 2; // 2–4 сек
+      const delay = Math.random(); // 0–1 сек
+      const xShift = Math.random() * 80 - 40; // от -40 до 40px
+
+      confetti.style.animationDuration = `${duration}s`;
+      confetti.style.animationDelay = `${delay}s`;
+      confetti.style.setProperty("--x-shift", `${xShift}px`);
+
+      confettiContainer.appendChild(confetti);
+    }
+
+    setTimeout(() => {
+      balloonContainer.innerHTML = "";
+      confettiContainer.innerHTML = "";
+    }, 5500); // Чуть больше, чтобы все успели завершиться
+  }
+
+  function randomColor() {
+    const colors = ["#ff4d4d", "#ffcc00", "#66ccff", "#66ff66", "#cc66ff"];
+    return colors[Math.floor(Math.random() * colors.length)];
   }
 });
