@@ -93,19 +93,19 @@ header {
 /* HERO SECTION */
 
 .hero {
-  background-image: url(../images/hero/hero_2.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
+  background: var(--yellow);
   max-width: 375px;
   height: 90vh;
   margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 28px;
-  color: aqua;
-  margin: 0 auto;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 44px;
+  text-align: center;
+  color: var(--white);
+  text-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (min-width: 768px) {

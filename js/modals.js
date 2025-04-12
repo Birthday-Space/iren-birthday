@@ -38,6 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
               Ваш браузер не поддерживает аудио.
             </audio>`;
           break;
+        case "image-audio":
+          const audioSrc = card.dataset.audio;
+          modalBody.innerHTML = `
+    <img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+    <audio controls autoplay style="width: 100%;">
+      <source src="${audioSrc}" type="audio/mpeg">
+      Ваш браузер не поддерживает аудио.
+    </audio>`;
+          break;
 
         case "image":
           modalBody.innerHTML = `<img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px;">`;
