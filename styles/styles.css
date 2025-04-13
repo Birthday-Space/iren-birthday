@@ -94,7 +94,7 @@ header {
 /* HERO SECTION */
 
 .hero {
-  background: url("../images/patterns/pattern_green.png"), var(--yellow);
+  background: var(--yellow) url("../images/patterns/pattern_green.png");
   background-size: contain;
   margin: 0 auto;
   overflow: hidden;
@@ -147,8 +147,6 @@ header {
   background-size: contain;
   background-position: center;
   text-align: center;
-
-  padding-top: 60px;
 }
 
 .section-title {
@@ -276,7 +274,7 @@ header {
   border-radius: 12px;
   max-width: 600px;
   width: 90%;
-  max-height: 90vh;
+  max-height: 90%;
   overflow-y: auto;
   position: relative;
 }

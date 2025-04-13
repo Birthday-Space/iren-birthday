@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = card.dataset.text || "";
       modalBody.innerHTML = "";
 
+      // Если тип - видео или аудио, приглушаем фон
+      if (["video", "audio", "youtube", "image-audio"].includes(type)) {
+        setBackgroundMusicVolume(0.2);
+      } else {
+        setBackgroundMusicVolume(1);
+      }
+
       switch (type) {
         case "video":
           modalBody.innerHTML = `
@@ -81,6 +88,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function closeModal() {
+    setBackgroundMusicVolume(1);
+
     modal.classList.remove("active");
     modalBody.innerHTML = "";
     launchCelebration();
@@ -129,6 +138,19 @@ document.addEventListener("DOMContentLoaded", () => {
       confettiContainer.appendChild(confetti);
     }
 
+    // ✨ Искры
+    for (let i = 0; i < 25; i++) {
+      const sparkle = document.createElement("div");
+      const colors = ["#ffffff", "#ffccff", "#ccffff", "#ffffcc"];
+      sparkle.style.background =
+        colors[Math.floor(Math.random() * colors.length)];
+      sparkle.className = "sparkle";
+      sparkle.style.left = `${Math.random() * 100}%`;
+      sparkle.style.top = `${Math.random() * 100}%`;
+      sparkle.style.animationDelay = `${Math.random()}s`;
+      confettiContainer.appendChild(sparkle);
+    }
+
     setTimeout(() => {
       balloonContainer.innerHTML = "";
       confettiContainer.innerHTML = "";
@@ -138,5 +160,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function randomColor() {
     const colors = ["#ff4d4d", "#ffcc00", "#66ccff", "#66ff66", "#cc66ff"];
     return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  function setBackgroundMusicVolume(vol) {
+    const music = document.getElementById("background-music");
+    if (music) {
+      music.volume = vol;
+    }
   }
 });
