@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>С Днем Рождения, Ирина!</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +26,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="hidden">
+   " <header class="hidden">
       <div class="container header-container">
         <div class="logo">Ирина 2025</div>
         <nav class="navigation">
@@ -34,7 +35,7 @@
             <li><a href="#congrats">Поздравления</a></li>
             <li><a href="#surprise">Сюрприз</a></li>
           </ul>
-        </nav>
+        </nav>"
         <!-- Mobile menu -->
         <div class="burger-menu">
           <span class="burger-line"></span>
@@ -63,11 +64,7 @@
       <section id="congrats" class="congrats">
         <div class="container">
           <h2 class="section-title">Принимай поздравления</h2>
-          <span class="card-icon">
-                <svg width="72" height="72">
-                  <use href="/images/icons/sprite.svg#icon-arrow-down"></use>
-                </svg>
-          </span>
+         
           <ul class="greeting-list">
 
             <!-- #Will&Alex Greeting -->
@@ -119,12 +116,12 @@
             <li
               class="greeting-card"
               data-type="image"
-              data-src="images/congrats/elza-real.jpg"
+              data-src="images/congrats/crazy-dog.jpg"
             >
         
               <span class="card-icon">
                 <svg width="72" height="72">
-                  <use href="/images/icons/sprite.svg#icon-video"></use>
+                  <use href="/images/icons/sprite.svg#icon-envelope"></use>
                 </svg>
               </span>
               <h3 class="card-sign">Эльза</h3>
@@ -211,6 +208,20 @@
         </div>
       </div>
 
+      <!-- Модальное окно подарка -->
+<div id="gift-modal" class="modal">
+  <div class="modal-overlay" id="gift-modal-overlay"></div>
+  <div class="modal-box">
+    <button class="modal-close" id="gift-modal-close">&times;</button>
+    <h2 class="modal-title">🔮 Заклинание для подарка</h2>
+    <p class="spell-text">
+      Русланий, заяка моя, цветочек мой, бусинка моя…  
+      Отдай мой подпрожек пожалуйста 🙏✨
+    </p>
+    <button class="confirm-spell-btn" id="confirm-spell-btn">Я произнесла заклинание!</button>
+  </div>
+</div>
+
       
 
     <!-- FOOTER -->
@@ -219,15 +230,16 @@
         <p class="footer-text">&copy; 2025 С любовью для Ирины 💖</p>
       </div>
     </footer>
-    <script src="./js/mobile-menu.js"></script>
-    <script src="./js/greeting-cards.js"></script>
+  
+    <script  src="./js/greeting-cards.js"></script>
+    <script  src="./js/gift-modal.js"></script>
 
-   <div id="balloons-container"></div>
-<div id="confetti-container"></div>
-<!-- <audio id="background-music" loop autoplay>
+    <div id="balloons-container"></div>
+    <div id="confetti-container"></div>
+<audio id="background-music" loop autoplay>
   <source src="audio/Scorpions - Wind Of Change.mp3" type="audio/mpeg">
   Ваш браузер не поддерживает аудио.
-</audio> -->
+</audio>
 
   </body>
 </html>
