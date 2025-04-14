@@ -168,4 +168,20 @@ document.addEventListener("DOMContentLoaded", () => {
       music.volume = vol;
     }
   }
+  // 🚀 Воспроизведение фоновой музыки после первого взаимодействия
+  const backgroundMusic = document.getElementById("background-music");
+
+  function tryPlayMusicOnce() {
+    if (backgroundMusic && backgroundMusic.paused) {
+      backgroundMusic.volume = 1;
+      backgroundMusic.play().catch((err) => {
+        console.log("Автовоспроизведение заблокировано:", err.message);
+      });
+    }
+    document.removeEventListener("click", tryPlayMusicOnce);
+    document.removeEventListener("touchstart", tryPlayMusicOnce);
+  }
+
+  document.addEventListener("click", tryPlayMusicOnce);
+  document.addEventListener("touchstart", tryPlayMusicOnce);
 });
