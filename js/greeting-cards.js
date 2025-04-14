@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Если тип - видео или аудио, приглушаем фон
       if (["video", "audio", "youtube", "image-audio"].includes(type)) {
-        setBackgroundMusicVolume(0.2);
+        setBackgroundMusicVolume(0.1);
       } else {
         setBackgroundMusicVolume(1);
       }
