@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       switch (type) {
         case "video":
-          modalBody.innerHTML = `
+          modalBody.innerHTML = ` 
             <video controls autoplay style="width: 100%;">
               <source src="${src}" type="video/mp4">
               Ваш браузер не поддерживает видео.
@@ -33,20 +33,20 @@ document.addEventListener("DOMContentLoaded", () => {
             ? src.split("/shorts/")[1]
             : src.match(/(?:youtu\.be\/|youtube\.com.*v=)([^&\n?#]+)/)[1];
 
-          modalBody.innerHTML = `
-    <div class="video-wrapper">
-      <iframe width="100%" height="400" 
-        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0${
+          modalBody.innerHTML = ` 
+            <div class="video-wrapper">
+              <iframe width="100%" height="400" 
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0${
             isShorts ? "&mute=0" : ""
           }" 
-        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-      </iframe>
-    </div>
-  `;
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+              </iframe>
+            </div>
+          `;
           break;
 
         case "audio":
-          modalBody.innerHTML = `
+          modalBody.innerHTML = ` 
             <audio controls autoplay style="width: 100%;">
               <source src="${src}" type="audio/mpeg">
               Ваш браузер не поддерживает аудио.
@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
         case "image-audio":
           const audioSrc = card.dataset.audio;
-          modalBody.innerHTML = `
-    <img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
-    <audio controls autoplay style="width: 100%;">
-      <source src="${audioSrc}" type="audio/mpeg">
-      Ваш браузер не поддерживает аудио.
-    </audio>`;
+          modalBody.innerHTML = ` 
+            <img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+            <audio controls autoplay style="width: 100%;">
+              <source src="${audioSrc}" type="audio/mpeg">
+              Ваш браузер не поддерживает аудио.
+            </audio>`;
           break;
 
         case "image":
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
 
         case "image-text":
-          modalBody.innerHTML = `
+          modalBody.innerHTML = ` 
             <img src="${src}" alt="Поздравление" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
             <p>${text}</p>`;
           break;
@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function closeModal() {
     setBackgroundMusicVolume(1);
-
     modal.classList.remove("active");
     modalBody.innerHTML = "";
     launchCelebration();
@@ -168,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       music.volume = vol;
     }
   }
+
   // 🚀 Воспроизведение фоновой музыки после первого взаимодействия
   const backgroundMusic = document.getElementById("background-music");
 
