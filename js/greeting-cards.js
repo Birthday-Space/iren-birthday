@@ -168,20 +168,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 🚀 Воспроизведение фоновой музыки после первого взаимодействия
+  // 🚀 Воспроизведение фоновой музыки при первом скролле
   const backgroundMusic = document.getElementById("background-music");
 
-  function tryPlayMusicOnce() {
+  function tryPlayMusicOnScroll() {
     if (backgroundMusic && backgroundMusic.paused) {
       backgroundMusic.volume = 1;
       backgroundMusic.play().catch((err) => {
         console.log("Автовоспроизведение заблокировано:", err.message);
       });
     }
-    document.removeEventListener("click", tryPlayMusicOnce);
-    document.removeEventListener("touchstart", tryPlayMusicOnce);
+    window.removeEventListener("scroll", tryPlayMusicOnScroll);
   }
 
-  document.addEventListener("click", tryPlayMusicOnce);
-  document.addEventListener("touchstart", tryPlayMusicOnce);
+  window.addEventListener("scroll", tryPlayMusicOnScroll);
 });
